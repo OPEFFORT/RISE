@@ -60,7 +60,7 @@
     },
     {
       "command": "RISE:toggleAllRiseButtons",
-      "keys": [","],
+      "keys": ["M"],
       "selector": ".lm-Widget.reveal"
     },
     {

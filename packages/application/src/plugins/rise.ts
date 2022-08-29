@@ -844,7 +844,7 @@ namespace Rise {
       const element = document.querySelector(selector) as HTMLElement | null;
       if (element) {
         element.style.visibility =
-          element.style.visibility === 'true' ? 'false' : 'true';
+          element.style.visibility === 'hidden' ? 'visible': 'hidden';
       }
     }
   }
@@ -954,9 +954,10 @@ namespace Rise {
         79: null, // o disabled
         80: null, // p, up disabled
         84: null, // t, modified in the custom notes plugin.
-        87: null // w, toggle overview
+        87: null, // w, toggle overview
         // is it ok?
-        // 188: toggleAllRiseButtons // comma
+        77: toggleAllRiseButtons, //'m', toggle all Rise buttons
+        188: toggleAllRiseButtons // comma
       }
     };
 
@@ -1107,7 +1108,7 @@ namespace Rise {
     ${helpListItem(CommandIDs.riseLastSlide)}
     ${helpListItem(CommandIDs.riseToggleOverview)}
     ${helpListItem(CommandIDs.riseNotesOpen)}
-    <li><kbd>${CommandRegistry.formatKeystroke(',')}</kbd>: ${
+    <li><kbd>${CommandRegistry.formatKeystroke('m')} or ${CommandRegistry.formatKeystroke(',')}</kbd>: ${
         helpStrings[CommandIDs.riseToggleAllButtons]
       }</li>
     <li><kbd>${CommandRegistry.formatKeystroke('/')}</kbd>: ${trans.__(
