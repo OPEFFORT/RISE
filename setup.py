@@ -32,7 +32,7 @@ ensured_targets = [
 labext_name = "rise-jupyterlab"
 
 INSTALL_REQUIRES = [
-    "jupyter_server>=1.6,<2"
+    "jupyter_server>=1.6,<2",
     "jupyterlab>=3,<4"
 ]
 
